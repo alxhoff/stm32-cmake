@@ -34,27 +34,20 @@ ELSEIF(STM32_FAMILY STREQUAL "F3")
 
 ELSEIF(STM32_FAMILY STREQUAL "F4")
     SET(LL_COMPONENTS	adc bus cortex crc dac dma2d dma exti fmc gpio i2c i2s iwdg
-						lptim pwr rcc rng rtc spi system tim usart usb utils wwdg)
+						lptim pwr rcc rng rtc spi system tim usart usb utils wwdg 
+                        fsmc sdmmc)
 
     SET(LL_REQUIRED_COMPONENTS bus cortex pwr rcc system utils)
 
     SET(LL_PREFIX stm32f4xx_)
 
 ELSEIF(STM32_FAMILY STREQUAL "F7")
-    SET(LL_COMPONENTS	adc bus cortex crc dac dma2d dma exti gpio i2c i2s iwdg
-						lptim pwr rcc rng rtc spi system tim usart usb utils wwdg)
+    SET(LL_COMPONENTS	adc bus cortex crc dac dma2d dma exti fmc gpio i2c i2s iwdg
+						lptim pwr rcc rng rtc spi sdmmc system tim usart usb utils wwdg)
 
     SET(LL_REQUIRED_COMPONENTS bus cortex pwr rcc system utils)
 
     SET(LL_PREFIX stm32f7xx_)
-	
-ELSEIF(STM32_FAMILY STREQUAL "H7")
-    SET(LL_COMPONENTS	adc bus cortex crc dac dma2d dma exti gpio i2c i2s iwdg
-						lptim pwr rcc rng rtc spi system tim usart usb utils wwdg)
-
-    SET(LL_REQUIRED_COMPONENTS bus cortex pwr rcc system utils)
-
-    SET(LL_PREFIX stm32h7xx_)
 
 ELSEIF(STM32_FAMILY STREQUAL "L0")
     SET(LL_COMPONENTS	adc bus comp cortex crc crs dac dma exti gpio i2c i2s

@@ -49,7 +49,7 @@ SET(USBDevice_COMPONENTS_AUDIO_SOURCES
 
 SET(USBDevice_COMPONENTS_Template_HEADERS
     Class/Template/Inc/usbd_template.h
-) 
+)
 SET(USBDevice_COMPONENTS_Template_SOURCES
     Class/Template/Src/usbd_template.c
 )
@@ -87,7 +87,7 @@ SET(USBDevice_COMPONENTS_CustomHID_SOURCES
 
 IF(NOT USBDevice_FIND_COMPONENTS)
     SET(USBDevice_FIND_COMPONENTS ${USBDevice_COMPONENTS})
-    MESSAGE(STATUS "No USBDevice components selected, using all: ${USBDevice_FIND_COMPONENTS}")
+    MESSAGE(STATUS "No USBDevice components selected, using all:  ${USBDevice_FIND_COMPONENTS}")
 ENDIF()
 
 FOREACH(cmp ${USBDevice_FIND_COMPONENTS})
@@ -125,4 +125,5 @@ ENDFOREACH()
 
 INCLUDE(FindPackageHandleStandardArgs)
 
-FIND_PACKAGE_HANDLE_STANDARD_ARGS(USBDevice DEFAULT_MSG USBDevice_INCLUDE_DIR USBDevice_SOURCES)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(USBDevice DEFAULT_MSG
+                                  USBDevice_INCLUDE_DIR USBDevice_SOURCES)
